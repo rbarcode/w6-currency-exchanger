@@ -8,39 +8,54 @@
 <body>
   <div class="container">
     <h1>Currency Converter</h1>
-    <p>Enter an amount below and convert between currencies using the dropdown menus.</p>
-    <form id="currency-exchanger">
-      <label for="amount">Amount:</label>
-      <input id="amount" type="number" name="amount" required>
+    <p>Enter an amount below to convert between currencies using the dropdown menus.</p>
 
-      <label for="base-select">From:</label>
-      <select name="base-currency" id="base-select" required>
-        <option value="">--Please choose a currency--</option>
-        <option value="USD">USD - US Dollar</option>
-        <option value="EUR">EUR - Euro</option>
-        <option value="GBP">GBP - British Pound</option>
-        <option value="KYD">KYD - Cayman Islands Dollar</option>
-        <option value="MNT">MNT - Mongolian Tugrik</option>
-        <option value="TJS">TJS - Tajikistani Somoni</option>
-        <option value="KPW">KPW - North Korean Won</option>
-      </select>
+    <div class="wrapper">
+      <form id="currency-exchanger">
 
-      <label for="target-select">To:</label>
-      <select name="target-currency" id="target-select" required>
-        <option value="">--Please choose a currency--</option>
-        <option value="USD">USD - US Dollar</option>
-        <option value="EUR">EUR - Euro</option>
-        <option value="GBP">GBP - British Pound</option>
-        <option value="KYD">KYD - Cayman Islands Dollar</option>
-        <option value="MNT">MNT - Mongolian Tugrik</option>
-        <option value="TJS">TJS - Tajikistani Somoni</option>
-        <option value="KPW">KPW - North Korean Won</option>
-      </select>
+        <div class="column-amount">
+          <label for="amount">Amount:</label>
+          <br>
+          <input id="amount" type="number" name="amount" required>
+        </div>
 
-      <button type="submit" id="convert-currency">Convert</button>
-      <button type="reset" id="reset">Reset Form</button>
+        <div class="column">
+          <label for="base-select">From:</label>
+          <br>
+          <select name="base-currency" id="base-select" required>
+            <option value="">--Please choose a currency--</option>
+            <option value="USD">USD - US Dollar</option>
+            <option value="EUR">EUR - Euro</option>
+            <option value="GBP">GBP - British Pound</option>
+            <option value="KYD">KYD - Cayman Islands Dollar</option>
+            <option value="MNT">MNT - Mongolian Tugrik</option>
+            <option value="TJS">TJS - Tajikistani Somoni</option>
+            <option value="KPW">KPW - North Korean Won</option>
+          </select>
+        </div>
 
-    </form>
+        <div class="column">
+          <label for="target-select">To:</label>
+          <br>
+          <select name="target-currency" id="target-select" required>
+            <option value="">--Please choose a currency--</option>
+            <option value="USD">USD - US Dollar</option>
+            <option value="EUR">EUR - Euro</option>
+            <option value="GBP">GBP - British Pound</option>
+            <option value="KYD">KYD - Cayman Islands Dollar</option>
+            <option value="MNT">MNT - Mongolian Tugrik</option>
+            <option value="TJS">TJS - Tajikistani Somoni</option>
+            <option value="KPW">KPW - North Korean Won</option>
+          </select>
+        </div>
+
+        <div class="interact">
+          <button type="submit" id="convert-currency">Convert</button>
+          <button type="reset" id="reset">Reset Form</button>
+        </div>
+
+      </form>
+    </div>
 
     <p id="show-response"></p>
 
