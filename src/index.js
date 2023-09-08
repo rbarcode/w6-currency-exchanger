@@ -15,6 +15,10 @@ export function printError(error) {
   document.getElementById("show-response").innerText = `${error}.`;
 }
 
+function resetPage() {
+  document.getElementById("show-response").innerText = null;
+}
+
 function handleFormSubmission(event) {
   event.preventDefault();
   const amountToConvert = document.getElementById("amount").value;
@@ -29,3 +33,4 @@ function submit() {
 }
 
 window.addEventListener("load", submit);
+window.addEventListener("reset", resetPage);
