@@ -2,7 +2,7 @@
 
 #### By Richard Barbour II
 
-#### //Summary of project in one or two sentences.// 
+#### Currency converter using ExchangeRate-API's API to access exchange rates.
 
 
 ## Technologies Used
@@ -12,13 +12,13 @@
 * JS
 * Node.js (16.13.1)
 * npm (8.1.2)
-* API from ExchangeRate-API
+* API for ExchangeRate-API
 
 
 
 ## Description
 
-//Short description paragraph//
+This site allows the user to convert a small set of currencies (USD, EUR, GBP, KYD, MNT, TJS) among each other using ExchangeRate-API's Pair Conversion API endpoint. The site also displays a unique error message if the user attempts to convert North Korean Wons, which is unsupported by ExchangeRate-API.
 
 ## Setup/Installation Requirements
 
