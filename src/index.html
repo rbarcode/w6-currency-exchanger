@@ -8,14 +8,14 @@
 <body>
   <div class="container">
     <h1>Currency Converter</h1>
-    <p>Enter an amount below and convert from a base currency to a target currency using the dropdown menus.</p>
+    <p>Enter an amount below and convert between currencies using the dropdown menus.</p>
     <form id="currency-exchanger">
       <label for="amount">Amount:</label>
-      <input id="amount" type="number" name="amount">
+      <input id="amount" type="number" name="amount" required>
 
       <label for="base-select">From:</label>
-      <select name="base-currency" id="base-select">
-        <!-- <option value="">--Please choose a currency--</option> -->
+      <select name="base-currency" id="base-select" required>
+        <option value="">--Please choose a currency--</option>
         <option value="USD">USD - US Dollar</option>
         <option value="EUR">EUR - Euro</option>
         <option value="GBP">GBP - British Pound</option>
@@ -25,8 +25,8 @@
       </select>
 
       <label for="target-select">To:</label>
-      <select name="target-currency" id="target-select">
-        <!-- <option value="">--Please choose a currency--</option> -->
+      <select name="target-currency" id="target-select" required>
+        <option value="">--Please choose a currency--</option>
         <option value="USD">USD - US Dollar</option>
         <option value="EUR">EUR - Euro</option>
         <option value="GBP">GBP - British Pound</option>
@@ -36,10 +36,11 @@
       </select>
 
       <button type="submit" id="convert-currency">Convert</button>
+      <button type="reset">Reset Form</button>
 
     </form>
 
-    <p id="showResponse"></p>
+    <p id="show-response"></p>
 
   </div>
 </body>
