@@ -6,9 +6,9 @@ export default async function getExchangeRate(base, target, amount) {
   if (response.result === "success") {
     printElements(response, base, target, amount);
   } else if (response.error-type === "unsupported-code") {
-    const unsupCurrency = "We do not support the supplied currency.";
-    printUnsupportedError();
+    const unsupCurrency = "We do not support at least one of the supplied currencies.";
+    printUnsupportedError(response, base, target);
   } else {
-    printError(response, base, target, amount);
+    printError(response);
   }
 }
