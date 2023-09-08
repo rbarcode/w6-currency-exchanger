@@ -7,12 +7,8 @@ export function printElements(response, base, target, amount) {
   document.getElementById("show-response").innerText = `${base} ${amount} = ${target} ${response.conversion_result}. The conversion rate is ${base} 1 = ${target} ${response.conversion_rate}.`;
 }
 
-export function printUnsupportedError(error, message, base, target) {
-  document.getElementById("show-response").innerText = `${error}. ${message} The supplied codes were: ${base}, ${target}.`;
-}
-
 export function printError(error) {
-  document.getElementById("show-response").innerText = `${error}.`;
+  document.getElementById("show-response").innerText = `${error}`;
 }
 
 function resetPage() {
