@@ -8,6 +8,7 @@ export function printElements(response, base, target, amount) {
 
 export function printError(error) {
   document.getElementById("show-response").innerText = `${error}`;
+  document.getElementById("show-response").removeAttribute("class");
 }
 
 function resetPage() {

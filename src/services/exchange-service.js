@@ -10,7 +10,7 @@ export default class ExchangeService {
       return jsonifiedResponse;
     } catch (error) {
       if (error.message.includes("unsupported-code")) {
-        const unsupCurrency = error.message.concat(` We do not support at least one of the supplied currencies. The supplied codes were: ${base}, ${target}.`);
+        const unsupCurrency = error.message.concat(` We do not support at least one of the supplied currencies, or the inputted code is not a currency. The supplied codes were: ${base}, ${target}.`);
         return unsupCurrency;
       } else {
         return error;
